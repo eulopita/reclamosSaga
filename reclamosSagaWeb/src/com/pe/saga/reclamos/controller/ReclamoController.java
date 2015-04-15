@@ -78,6 +78,7 @@ public class ReclamoController implements Serializable{
     		}    		
 		} catch (Exception e) {
 			e.printStackTrace();
+			
 		}    	
     }
     
