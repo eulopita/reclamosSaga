@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html" version="2.0"
+	xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+
+	<jsp:directive.page language="java"
+		contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" />
+	<jsp:text>
+		<![CDATA[ <?xml version="1.0" encoding="ISO-8859-1" ?> ]]>
+	</jsp:text>
+	<jsp:text>
+		<![CDATA[ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> ]]>
+	</jsp:text>
+
+
+	<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Reclamos</title>
+</head>
+
+
+<body>
+	<f:view>
+		<af:document id="d1">
+		  <h:form>
+             
+             
+             <h:panelGrid id="panel"  border="1" 
+                          cellpadding="10" cellspacing="1"> 
+		         <f:facet name="header">
+		            <h:outputText value="REGISTRO NUEVO RECLAMO"/>
+		         </f:facet>
+		             <!-- primera fila -->
+		                <h:panelGrid columns="4"> 
+		                  <h:outputLabel value="Tipo Documento:" />
+				          <h:selectOneMenu id="cboTipoDoc"
+				                          value="#{reclamoController.tipoDoc}">
+						   <f:selectItem itemValue="1" itemLabel="DNI" /> 
+						   <f:selectItem itemValue="2" itemLabel="RUC" />	
+						   <f:selectItem itemValue="3" itemLabel="L.E" />   							
+						 </h:selectOneMenu>
+						 					
+						<h:outputLabel value="Nº de Documento:" />                    
+	                    <h:inputText id="txtNumDoc" 
+	                                 value="#{reclamoController.numeroDoc}"/>
+					
+		                </h:panelGrid>
+				        
+					<!-- segunda fila -->
+					 <h:panelGrid columns="2"> 
+						<h:outputLabel value="Nombres:" />                    
+	                    <h:inputText id="txtNombres" 
+	                                 value="#{reclamoController.nombres}"/>
+					 </h:panelGrid>
+					
+					<!-- tercera fila -->
+					 <h:panelGrid columns="4"> 
+						<h:outputLabel value="Apellido Paterno:" />                    
+	                    <h:inputText id="txtApPaterno"
+	                                 value="#{reclamoController.apellidos}"/>
+						
+						
+						<h:outputLabel value="Apellido Materno:" />                    
+	                    <h:inputText id="txtApMaterno"
+	                                 value="#{reclamoController.apellidos}"/>
+					</h:panelGrid>           
+			   		
+
+					<f:facet name="footer">
+		            <h:panelGroup style="display:block; text-align:center">
+
+							<h:commandButton action="#{reclamoController.verLista}"
+								id="c1" label="d"></h:commandButton>
+					</h:panelGroup>
+		         </f:facet>      
+		     </h:panelGrid>
+
+				<h:dataTable var="tblReclamos"
+					value="#{reclamoController.reclamoFindAll}">
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Ap Materno"></h:outputText>
+						</f:facet>
+						<h:outputText id="apMaterno" value="#{tblReclamos.apMaterno}"></h:outputText>
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Nombres"></h:outputText>
+						</f:facet>
+						<h:outputText id="nombres" value="#{tblReclamos.nombres}"></h:outputText>
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Id Reclamo"></h:outputText>
+						</f:facet>
+						<h:outputText id="idReclamo" value="#{tblReclamos.idReclamo}"></h:outputText>
+					</h:column>
+				</h:dataTable>
+
+
+
+
+			</h:form>   
+		</af:document>
+	</f:view>
+</body>
+
+	</html>
+</jsp:root>

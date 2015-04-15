@@ -1,0 +1,149 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<pageDefinition version="11.1.1.6.2" id="reclamoAdfPageDef" Package="pages" xmlns="http://xmlns.oracle.com/adfm/uimodel">
+   <parameters/>
+   <executables>
+      <methodIterator Binds="persistReclamo.result" DataControl="ReclamosSesionBeanLocal" RangeSize="25" BeanClass="com.pe.saga.reclamos.domain.Reclamo" id="persistReclamoIterator"/>
+      <iterator Binds="root" RangeSize="25" DataControl="ReclamosSesionBeanLocal" id="ReclamosSesionBeanLocalIterator"/>
+      <accessorIterator MasterBinding="ReclamosSesionBeanLocalIterator" Binds="reclamoFindAll" RangeSize="25" DataControl="ReclamosSesionBeanLocal" BeanClass="com.pe.saga.reclamos.domain.Reclamo" id="reclamoFindAllIterator"/>
+   </executables>
+   <bindings>
+      <methodAction id="persistReclamo" RequiresUpdateModel="true" Action="invokeMethod" MethodName="persistReclamo" IsViewObjectMethod="false" DataControl="ReclamosSesionBeanLocal" InstanceName="ReclamosSesionBeanLocal.dataProvider" ReturnName="data.ReclamosSesionBeanLocal.methodResults.persistReclamo_ReclamosSesionBeanLocal_dataProvider_persistReclamo_result">
+         <NamedData NDName="reclamo" NDType="com.pe.saga.reclamos.domain.Reclamo"/>
+      </methodAction>
+      <attributeValues IterBinding="persistReclamoIterator" id="documento">
+         <AttrNames>
+            <Item Value="documento"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="tipoDocumento">
+         <AttrNames>
+            <Item Value="tipoDocumento"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="nombres">
+         <AttrNames>
+            <Item Value="nombres"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="reclamoFindAllIterator" id="nombres1">
+         <AttrNames>
+            <Item Value="nombres"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="ReclamosSesionBeanLocalIterator" id="nombres2">
+         <AttrNames>
+            <Item Value="nombres"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="apMaterno">
+         <AttrNames>
+            <Item Value="apMaterno"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="apMaternoApoderado">
+         <AttrNames>
+            <Item Value="apMaternoApoderado"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="apellidos">
+         <AttrNames>
+            <Item Value="apellidos"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="apellidosApoderado">
+         <AttrNames>
+            <Item Value="apellidosApoderado"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="descripcionProducto">
+         <AttrNames>
+            <Item Value="descripcionProducto"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="detalleReclamo">
+         <AttrNames>
+            <Item Value="detalleReclamo"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="direccion">
+         <AttrNames>
+            <Item Value="direccion"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="documentoApoderado">
+         <AttrNames>
+            <Item Value="documentoApoderado"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="email">
+         <AttrNames>
+            <Item Value="email"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="estado">
+         <AttrNames>
+            <Item Value="estado"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="fechaReclamo">
+         <AttrNames>
+            <Item Value="fechaReclamo"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="idTienda">
+         <AttrNames>
+            <Item Value="idTienda"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="menorEdad">
+         <AttrNames>
+            <Item Value="menorEdad"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="nombresApoderado">
+         <AttrNames>
+            <Item Value="nombresApoderado"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="recImporte">
+         <AttrNames>
+            <Item Value="recImporte"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="recPedido">
+         <AttrNames>
+            <Item Value="recPedido"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="telefono">
+         <AttrNames>
+            <Item Value="telefono"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="tipoDocApoderado">
+         <AttrNames>
+            <Item Value="tipoDocApoderado"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="tipoReclamo">
+         <AttrNames>
+            <Item Value="tipoReclamo"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="tipoRegistro">
+         <AttrNames>
+            <Item Value="tipoRegistro"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="tipoRespuesta">
+         <AttrNames>
+            <Item Value="tipoRespuesta"/>
+         </AttrNames>
+      </attributeValues>
+      <attributeValues IterBinding="persistReclamoIterator" id="ubigeo">
+         <AttrNames>
+            <Item Value="ubigeo"/>
+         </AttrNames>
+      </attributeValues>
+   </bindings>
+</pageDefinition>

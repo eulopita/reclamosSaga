@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html" version="2.0"
+	xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+
+	<jsp:directive.page language="java"
+		contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" />
+	<jsp:text>
+		<![CDATA[ <?xml version="1.0" encoding="ISO-8859-1" ?> ]]>
+	</jsp:text>
+	<jsp:text>
+		<![CDATA[ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> ]]>
+	</jsp:text>
+
+
+	<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Reclamos</title>
+</head>
+
+
+<body>
+	<f:view>
+		<af:document id="d1">
+		  <af:form id="f1">           
+             <af:panelSplitter splitterPosition="300" id="ps1" 
+				                  orientation="horizontal" positionedFromEnd="false">
+				                  
+		     <f:facet name="first">  	
+		     	
+		     																																										<!--ADF: Pantalla bound to ReclamosSesionBeanLocal.persistReclamo(Reclamo).Reclamo -->
+		     																																										<af:panelFormLayout
+		     																																											id="p1">
+		     																																											<af:inputText
+		     																																												columns="#{bindings.apMaterno.hints.displayWidth}"
+		     																																												label="Apellido Materno"
+		     																																												maximumLength="#{bindings.apMaterno.hints.precision}"
+		     																																												required="#{bindings.apMaterno.hints.mandatory}"
+		     																																												shortDesc="#{bindings.apMaterno.hints.tooltip}"
+		     																																												value="#{bindings.apMaterno.inputValue}"
+		     																																												id="i1">
+		     																																												<f:validator
+		     																																													binding="#{bindings.apMaterno.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.apMaternoApoderado.hints.displayWidth}"
+		     																																												label="Apellido Materno Ap"
+		     																																												maximumLength="#{bindings.apMaternoApoderado.hints.precision}"
+		     																																												required="#{bindings.apMaternoApoderado.hints.mandatory}"
+		     																																												shortDesc="#{bindings.apMaternoApoderado.hints.tooltip}"
+		     																																												value="#{bindings.apMaternoApoderado.inputValue}"
+		     																																												id="i2">
+		     																																												<f:validator
+		     																																													binding="#{bindings.apMaternoApoderado.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.apellidos.hints.displayWidth}"
+		     																																												label="Apellido PAterno"
+		     																																												maximumLength="#{bindings.apellidos.hints.precision}"
+		     																																												required="#{bindings.apellidos.hints.mandatory}"
+		     																																												shortDesc="#{bindings.apellidos.hints.tooltip}"
+		     																																												value="#{bindings.apellidos.inputValue}"
+		     																																												id="i3">
+		     																																												<f:validator
+		     																																													binding="#{bindings.apellidos.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.apellidosApoderado.hints.displayWidth}"
+		     																																												label="Apellido Paterno Apo"
+		     																																												maximumLength="#{bindings.apellidosApoderado.hints.precision}"
+		     																																												required="#{bindings.apellidosApoderado.hints.mandatory}"
+		     																																												shortDesc="#{bindings.apellidosApoderado.hints.tooltip}"
+		     																																												value="#{bindings.apellidosApoderado.inputValue}"
+		     																																												id="i4">
+		     																																												<f:validator
+		     																																													binding="#{bindings.apellidosApoderado.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.descripcionProducto.hints.displayWidth}"
+		     																																												label="Descripcion"
+		     																																												maximumLength="#{bindings.descripcionProducto.hints.precision}"
+		     																																												required="#{bindings.descripcionProducto.hints.mandatory}"
+		     																																												shortDesc="#{bindings.descripcionProducto.hints.tooltip}"
+		     																																												value="#{bindings.descripcionProducto.inputValue}"
+		     																																												id="i5">
+		     																																												<f:validator
+		     																																													binding="#{bindings.descripcionProducto.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.detalleReclamo.hints.displayWidth}"
+		     																																												label="Detalle Reclamo"
+		     																																												maximumLength="#{bindings.detalleReclamo.hints.precision}"
+		     																																												required="#{bindings.detalleReclamo.hints.mandatory}"
+		     																																												shortDesc="#{bindings.detalleReclamo.hints.tooltip}"
+		     																																												value="#{bindings.detalleReclamo.inputValue}"
+		     																																												id="i6">
+		     																																												<f:validator
+		     																																													binding="#{bindings.detalleReclamo.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.direccion.hints.displayWidth}"
+		     																																												label="Direccion"
+		     																																												maximumLength="#{bindings.direccion.hints.precision}"
+		     																																												required="#{bindings.direccion.hints.mandatory}"
+		     																																												shortDesc="#{bindings.direccion.hints.tooltip}"
+		     																																												value="#{bindings.direccion.inputValue}"
+		     																																												id="i7">
+		     																																												<f:validator
+		     																																													binding="#{bindings.direccion.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.documento.hints.displayWidth}"
+		     																																												label="Nº Documento"
+		     																																												maximumLength="#{bindings.documento.hints.precision}"
+		     																																												required="#{bindings.documento.hints.mandatory}"
+		     																																												shortDesc="#{bindings.documento.hints.tooltip}"
+		     																																												value="#{bindings.documento.inputValue}"
+		     																																												id="i8">
+		     																																												<f:validator
+		     																																													binding="#{bindings.documento.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.documentoApoderado.hints.displayWidth}"
+		     																																												label="Nº Documento Apo"
+		     																																												maximumLength="#{bindings.documentoApoderado.hints.precision}"
+		     																																												required="#{bindings.documentoApoderado.hints.mandatory}"
+		     																																												shortDesc="#{bindings.documentoApoderado.hints.tooltip}"
+		     																																												value="#{bindings.documentoApoderado.inputValue}"
+		     																																												id="i9">
+		     																																												<f:validator
+		     																																													binding="#{bindings.documentoApoderado.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.email.hints.displayWidth}"
+		     																																												label="Email"
+		     																																												maximumLength="#{bindings.email.hints.precision}"
+		     																																												required="#{bindings.email.hints.mandatory}"
+		     																																												shortDesc="#{bindings.email.hints.tooltip}"
+		     																																												value="#{bindings.email.inputValue}"
+		     																																												id="i10">
+		     																																												<f:validator
+		     																																													binding="#{bindings.email.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.estado.hints.displayWidth}"
+		     																																												label="Estado"
+		     																																												maximumLength="#{bindings.estado.hints.precision}"
+		     																																												required="#{bindings.estado.hints.mandatory}"
+		     																																												shortDesc="#{bindings.estado.hints.tooltip}"
+		     																																												value="#{bindings.estado.inputValue}"
+		     																																												id="i11">
+		     																																												<f:validator
+		     																																													binding="#{bindings.estado.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputDate
+		     																																												label="Fecha"
+		     																																												required="#{bindings.fechaReclamo.hints.mandatory}"
+		     																																												shortDesc="#{bindings.fechaReclamo.hints.tooltip}"
+		     																																												value="#{bindings.fechaReclamo.inputValue}"
+		     																																												id="i12">
+		     																																												<f:validator
+		     																																													binding="#{bindings.fechaReclamo.validator}" />
+		     																																												<af:convertDateTime
+		     																																													pattern="#{bindings.fechaReclamo.format}"
+		     																																													id="c1" />
+		     																																											</af:inputDate>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.idTienda.hints.displayWidth}"
+		     																																												label="Id Tienda"
+		     																																												maximumLength="#{bindings.idTienda.hints.precision}"
+		     																																												required="#{bindings.idTienda.hints.mandatory}"
+		     																																												shortDesc="#{bindings.idTienda.hints.tooltip}"
+		     																																												value="#{bindings.idTienda.inputValue}"
+		     																																												id="i13">
+		     																																												<f:validator
+		     																																													binding="#{bindings.idTienda.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.menorEdad.hints.displayWidth}"
+		     																																												label="Menor Edad"
+		     																																												maximumLength="#{bindings.menorEdad.hints.precision}"
+		     																																												required="#{bindings.menorEdad.hints.mandatory}"
+		     																																												shortDesc="#{bindings.menorEdad.hints.tooltip}"
+		     																																												value="#{bindings.menorEdad.inputValue}"
+		     																																												id="i14">
+		     																																												<f:validator
+		     																																													binding="#{bindings.menorEdad.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.nombres.hints.displayWidth}"
+		     																																												label="Nombres"
+		     																																												maximumLength="#{bindings.nombres.hints.precision}"
+		     																																												required="#{bindings.nombres.hints.mandatory}"
+		     																																												shortDesc="#{bindings.nombres.hints.tooltip}"
+		     																																												value="#{bindings.nombres.inputValue}"
+		     																																												id="i15">
+		     																																												<f:validator
+		     																																													binding="#{bindings.nombres.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.nombresApoderado.hints.displayWidth}"
+		     																																												label="Nombres Apo"
+		     																																												maximumLength="#{bindings.nombresApoderado.hints.precision}"
+		     																																												required="#{bindings.nombresApoderado.hints.mandatory}"
+		     																																												shortDesc="#{bindings.nombresApoderado.hints.tooltip}"
+		     																																												value="#{bindings.nombresApoderado.inputValue}"
+		     																																												id="i16">
+		     																																												<f:validator
+		     																																													binding="#{bindings.nombresApoderado.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.recImporte.hints.displayWidth}"
+		     																																												label="Importe"
+		     																																												maximumLength="#{bindings.recImporte.hints.precision}"
+		     																																												required="#{bindings.recImporte.hints.mandatory}"
+		     																																												shortDesc="#{bindings.recImporte.hints.tooltip}"
+		     																																												value="#{bindings.recImporte.inputValue}"
+		     																																												id="i17">
+		     																																												<f:validator
+		     																																													binding="#{bindings.recImporte.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.recPedido.hints.displayWidth}"
+		     																																												label="Pedido"
+		     																																												maximumLength="#{bindings.recPedido.hints.precision}"
+		     																																												required="#{bindings.recPedido.hints.mandatory}"
+		     																																												shortDesc="#{bindings.recPedido.hints.tooltip}"
+		     																																												value="#{bindings.recPedido.inputValue}"
+		     																																												id="i18">
+		     																																												<f:validator
+		     																																													binding="#{bindings.recPedido.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.telefono.hints.displayWidth}"
+		     																																												label="Telefono"
+		     																																												maximumLength="#{bindings.telefono.hints.precision}"
+		     																																												required="#{bindings.telefono.hints.mandatory}"
+		     																																												shortDesc="#{bindings.telefono.hints.tooltip}"
+		     																																												value="#{bindings.telefono.inputValue}"
+		     																																												id="i19">
+		     																																												<f:validator
+		     																																													binding="#{bindings.telefono.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.tipoDocApoderado.hints.displayWidth}"
+		     																																												label="Tipo Documento Apo"
+		     																																												maximumLength="#{bindings.tipoDocApoderado.hints.precision}"
+		     																																												required="#{bindings.tipoDocApoderado.hints.mandatory}"
+		     																																												shortDesc="#{bindings.tipoDocApoderado.hints.tooltip}"
+		     																																												value="#{bindings.tipoDocApoderado.inputValue}"
+		     																																												id="i20">
+		     																																												<f:validator
+		     																																													binding="#{bindings.tipoDocApoderado.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.tipoDocumento.hints.displayWidth}"
+		     																																												label="Tipo Documento"
+		     																																												maximumLength="#{bindings.tipoDocumento.hints.precision}"
+		     																																												required="#{bindings.tipoDocumento.hints.mandatory}"
+		     																																												shortDesc="#{bindings.tipoDocumento.hints.tooltip}"
+		     																																												value="#{bindings.tipoDocumento.inputValue}"
+		     																																												id="i21">
+		     																																												<f:validator
+		     																																													binding="#{bindings.tipoDocumento.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.tipoReclamo.hints.displayWidth}"
+		     																																												label="Tipo Reclamo"
+		     																																												maximumLength="#{bindings.tipoReclamo.hints.precision}"
+		     																																												required="#{bindings.tipoReclamo.hints.mandatory}"
+		     																																												shortDesc="#{bindings.tipoReclamo.hints.tooltip}"
+		     																																												value="#{bindings.tipoReclamo.inputValue}"
+		     																																												id="i22">
+		     																																												<f:validator
+		     																																													binding="#{bindings.tipoReclamo.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.tipoRegistro.hints.displayWidth}"
+		     																																												label="Tipo Registro"
+		     																																												maximumLength="#{bindings.tipoRegistro.hints.precision}"
+		     																																												required="#{bindings.tipoRegistro.hints.mandatory}"
+		     																																												shortDesc="#{bindings.tipoRegistro.hints.tooltip}"
+		     																																												value="#{bindings.tipoRegistro.inputValue}"
+		     																																												id="i23">
+		     																																												<f:validator
+		     																																													binding="#{bindings.tipoRegistro.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.tipoRespuesta.hints.displayWidth}"
+		     																																												label="Tipo Respuesta"
+		     																																												maximumLength="#{bindings.tipoRespuesta.hints.precision}"
+		     																																												required="#{bindings.tipoRespuesta.hints.mandatory}"
+		     																																												shortDesc="#{bindings.tipoRespuesta.hints.tooltip}"
+		     																																												value="#{bindings.tipoRespuesta.inputValue}"
+		     																																												id="i24">
+		     																																												<f:validator
+		     																																													binding="#{bindings.tipoRespuesta.validator}" />
+		     																																											</af:inputText>
+		     																																											<af:inputText
+		     																																												columns="#{bindings.ubigeo.hints.displayWidth}"
+		     																																												label="Ubigeo"
+		     																																												maximumLength="#{bindings.ubigeo.hints.precision}"
+		     																																												required="#{bindings.ubigeo.hints.mandatory}"
+		     																																												shortDesc="#{bindings.ubigeo.hints.tooltip}"
+		     																																												value="#{bindings.ubigeo.inputValue}"
+		     																																												id="i25">
+		     																																												<f:validator
+		     																																													binding="#{bindings.ubigeo.validator}" />
+		     																																											</af:inputText>
+		     																																											<f:facet
+		     																																												name="footer">
+		     																																												<af:commandButton
+		     																																													text="Submit"
+		     																																													id="c2">
+		     																																												</af:commandButton>
+		     																																											</f:facet>
+		     																																										</af:panelFormLayout>
+		     																																										<!--ADF: Texto de Entrada con Etiqueta bound to ReclamosSesionBeanLocal.persistReclamo(Reclamo).Parameters.reclamo.nombres -->
+		     	
+		     																								<!--ADF: Texto de Entrada con Etiqueta bound to ReclamosSesionBeanLocal.persistReclamo(Reclamo).Parameters.reclamo.nombres -->
+		     	
+		     	
+		     
+		     </f:facet>
+             
+             </af:panelSplitter>
+		  
+		  </af:form>   
+		</af:document>
+	</f:view>
+</body>
+
+	</html>
+</jsp:root>

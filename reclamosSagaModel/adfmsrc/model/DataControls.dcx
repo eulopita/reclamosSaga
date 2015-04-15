@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DataControlConfigs version="11.1.1.6.2" id="DataControls" Package="model" xmlns="http://xmlns.oracle.com/adfm/configuration">
+   <AdapterDataControl id="ReclamosSesionBeanLocal" FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl" ImplDef="oracle.adfinternal.model.adapter.ejb.EjbDefinition" SupportsTransactions="false" SupportsSortCollection="true" SupportsResetState="false" SupportsRangesize="false" SupportsFindMode="false" SupportsUpdates="true" Definition="com.pe.saga.reclamos.service.ReclamosSesionBeanLocal" BeanClass="com.pe.saga.reclamos.service.ReclamosSesionBeanLocal" xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+      <CreatableTypes>
+         <TypeInfo FullName="com.pe.saga.reclamos.domain.Reclamo"/>
+      </CreatableTypes>
+      <Source>
+         <ejb-definition ejb-version="3.0" ejb-name="ReclamosSesionBean" ejb-type="Session" ejb-business-interface="com.pe.saga.reclamos.service.ReclamosSesionBeanLocal" ejb-interface-type="local" DataControlHandler="oracle.adf.model.adapter.bean.jpa.JPQLDataFilterHandler" xmlns="http://xmlns.oracle.com/adfm/adapter/ejb"/>
+      </Source>
+   </AdapterDataControl>
+</DataControlConfigs>

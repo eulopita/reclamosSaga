@@ -1,0 +1,14 @@
+
+
+.subTitulo1 {
+	border-spacing: 0px;
+	border-width: 1px !important;
+	border-style: solid !important;
+	border-collapse: separate;
+	width: 100%;
+	border-color: #E3E3E3;
+}
+
+.txtDescrip{
+	font-family: Arial;
+}

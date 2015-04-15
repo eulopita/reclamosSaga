@@ -1,0 +1,30 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<JavaBean version="11.1.1.6.2" id="Reclamo" Package="com.pe.saga.reclamos.domain" BeanClass="com.pe.saga.reclamos.domain.Reclamo" isJavaBased="true" xmlns="http://xmlns.oracle.com/adfm/beanmodel">
+   <Attribute Name="idReclamo" PrimaryKey="true" Type="long"/>
+   <Attribute Name="apMaterno" Type="java.lang.String"/>
+   <Attribute Name="apMaternoApoderado" Type="java.lang.String"/>
+   <Attribute Name="apellidos" Type="java.lang.String"/>
+   <Attribute Name="apellidosApoderado" Type="java.lang.String"/>
+   <Attribute Name="descripcionProducto" Type="java.lang.String"/>
+   <Attribute Name="detalleReclamo" Type="java.lang.String"/>
+   <Attribute Name="direccion" Type="java.lang.String"/>
+   <Attribute Name="documento" Type="java.lang.String"/>
+   <Attribute Name="documentoApoderado" Type="java.lang.String"/>
+   <Attribute Name="email" Type="java.lang.String"/>
+   <Attribute Name="estado" Type="java.lang.String"/>
+   <Attribute Name="fechaReclamo" Type="java.util.Date"/>
+   <Attribute Name="idTienda" Type="long"/>
+   <Attribute Name="menorEdad" Type="int"/>
+   <Attribute Name="nombres" Type="java.lang.String"/>
+   <Attribute Name="nombresApoderado" Type="java.lang.String"/>
+   <Attribute Name="recImporte" Type="java.math.BigDecimal"/>
+   <Attribute Name="recPedido" Type="java.lang.String"/>
+   <Attribute Name="telefono" Type="java.lang.String"/>
+   <Attribute Name="tipoDocApoderado" Type="int"/>
+   <Attribute Name="tipoDocumento" Type="int"/>
+   <Attribute Name="tipoReclamo" Type="int"/>
+   <Attribute Name="tipoRegistro" Type="int"/>
+   <Attribute Name="tipoRespuesta" Type="int"/>
+   <Attribute Name="ubigeo" Type="java.lang.String"/>
+   <ConstructorMethod IsCollection="true" Type="com.pe.saga.reclamos.domain.Reclamo" BeanClass="com.pe.saga.reclamos.domain.Reclamo" id="Reclamo"/>
+</JavaBean>

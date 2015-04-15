@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html" version="2.0"
+	xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+
+	 <jsp:directive.page language="java"
+		contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" />
+	<jsp:text>
+		<![CDATA[ <?xml version="1.0" encoding="ISO-8859-1" ?> ]]>
+	</jsp:text>
+	<jsp:text>
+		<![CDATA[ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> ]]>
+	</jsp:text> 
+
+
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /> 
+ <title>Reclamos</title>  
+</head>
+
+
+<body>
+	<f:view>
+		<af:document id="d1">
+		  <h:form id="frmReclamo">
+		  
+			<af:panelBox id="p1" >
+			
+				<h:panelGrid id="panel"  border="1" style="background-color: white; 
+                    bottom: 0px; left: 0px; right: 0px; top: 0px;" 
+                          cellpadding="5" cellspacing="1" > 
+                          
+		         <f:facet name="header">
+		            <h:outputText value="REGISTRO NUEVO RECLAMO"/>
+		         </f:facet>			         
+		         
+		          <af:panelHeader id="p6" text="Información Personal">
+
+					 <!-- primera fila -->
+		                <h:panelGrid columns="4" style="width: 77%;">  
+		                  <h:outputText value="Tipo Documento:"/> 
+				          <af:selectOneChoice id="cboTipoDoc"
+				                          value="#{reclamoController.tipoDoc}">
+				           <f:selectItem itemValue="" itemLabel="Seleccione" />
+						   <f:selectItem itemValue="1" itemLabel="DNI" /> 
+						   <f:selectItem itemValue="2" itemLabel="RUC" />	
+						   <f:selectItem itemValue="3" itemLabel="L.E" />   							
+						 </af:selectOneChoice>
+						 					
+						<h:outputText  value="Nº de Documento:"/> 	                   
+					    <h:inputText id="txtNumDoc" value="#{reclamoController.numDoc}" />    
+
+
+
+							</h:panelGrid>
+				      
+					<!-- segunda fila -->
+					 <h:panelGrid columns="2" style="width: 75%;">  
+						<h:outputText value="Nombres:" />                    
+	                  
+	                    <h:inputText id="txtNombres" 
+	                                 value="#{reclamoController.nombres}"/>
+					 </h:panelGrid>
+					
+					<!-- tercera fila -->
+					 <h:panelGrid columns="4" style="width: 100%;"> 
+						<h:outputText value="Apellido Paterno:" />                    
+	                    <h:inputText id="txtApPaterno"
+	                                 value="#{reclamoController.apellidoPat}"/>
+						
+						
+						<h:outputLabel value="Apellido Materno:" />                    
+	                    <h:inputText id="txtApMaterno"
+	                                 value="#{reclamoController.apellidoMat}"/>
+					</h:panelGrid>
+					
+                      <!-- cuarta fila -->
+                    <h:panelGrid columns="2"> 
+                        <h:outputText value="Tipo de Respuesta:" />                      
+				        <af:selectOneChoice id="cboTipoResp"
+				                          value="#{reclamoController.tipoRespuesta}">
+				            <f:selectItem itemValue="" itemLabel="Seleccione" /> 
+						   <f:selectItem itemValue="1" itemLabel="Dirección Domicilio" /> 
+						   <f:selectItem itemValue="2" itemLabel="Dirección Email" />	
+						   <f:selectItem itemValue="3" itemLabel="Dirección Oficina" />						 				
+						</af:selectOneChoice>
+					</h:panelGrid>
+					
+					<!-- quinta fila -->                     
+                    <h:panelGrid columns="2" style="width: 85%;">                                           
+                          <h:outputText value="Dirección:" />                     
+                          <h:inputText id="txtDireccion"
+	                                 value="#{reclamoController.direccion}"/>             
+                   </h:panelGrid>
+                   
+                   <!-- sexta fila -->
+                   <h:panelGrid columns="4" style="width: 93%;"> 
+                      <h:outputText value="Dpto/prov/Dist:" />
+
+					 <af:selectOneChoice id="cboDepto" value="#{reclamoController.codDepto}" 
+					                     autoSubmit="true" 
+					                     valueChangeListener="#{reclamoController.selectProvincia}"> 				 
+					       <f:selectItem itemValue="" itemLabel="Seleccionar" />            
+						   <f:selectItems value="#{reclamoController.listaDpto}" />	
+					 </af:selectOneChoice>	 
+					  	
+					 <af:selectOneChoice id="cboProv" value="#{reclamoController.codProvincia}"> 				 
+					       <f:selectItem itemValue="" itemLabel="Seleccionar" />            
+						    <f:selectItems value="#{reclamoController.listaProv}" />	
+					 </af:selectOneChoice>  	
+					  	
+					 <af:selectOneChoice id="cboDist" value="#{reclamoController.codDistrito}"> 				 
+					       <f:selectItem itemValue="" itemLabel="Seleccionar" />            
+						   <f:selectItems value="#{reclamoController.listaDistrito}" />      	
+					 </af:selectOneChoice>               
+                      
+				  </h:panelGrid>
+
+					
+					<!-- septima fila -->  
+				 <h:panelGrid columns="2" style="width: 72%;">   
+					<h:outputText value="telefono:"/>                    
+	                <h:inputText id="txtTelef"
+	                                 value="#{reclamoController.telefono}"/> 	               
+				 </h:panelGrid>
+					  
+			     <!-- octava fila -->  
+				 <h:panelGrid columns="2" style="width: 100%;"> 	  
+					<h:outputText value="Email:" />                    
+	                <h:inputText id="txtEmail"
+	                                 value="#{reclamoController.email}"/> 	                 
+				</h:panelGrid>
+				
+			  </af:panelHeader>
+					
+					
+			   <!-- Informaciçòn General-->  
+			   
+			 <af:panelHeader id="p5" text="Información General">	 		   	
+					
+			  <!-- novena fila -->  	
+					
+			  <h:panelGrid columns="4" > 	  
+					<h:outputText value="Identificación del bien contratado:" />
+					<af:selectOneRadio id="s3"  layout="horizontal" value="#{reclamoController.tipoRegistro}">
+					    <f:selectItem itemValue="1" itemLabel="Producto" />
+                        <f:selectItem itemValue="2" itemLabel="Servicio" />	
+					</af:selectOneRadio>								
+				    	
+	                <h:outputText value="Monto Reclamado:" />                    
+	                <h:inputText id="txtMonto"
+	                                 value="#{reclamoController.montoReclamado}" style="width:60px;"/> 
+	                
+			  </h:panelGrid>		
+					
+		      <!-- decima fila -->  	
+					
+			  <h:panelGrid columns="2" style="width: 100%;"> 	  
+					<h:outputText value="Descripción:" />                    
+	                <h:inputTextarea value="#{reclamoController.descproducto}"/>     
+			 </h:panelGrid>	
+			 
+		    </af:panelHeader> 
+			 		 
+					
+			 <!-- Detalle de su Reclamo-->  
+			 	
+			<af:panelHeader id="p4" text="Detalle de su Reclamo">	 
+			 
+			 <h:panelGrid columns="2"> 	  
+					<h:outputText value="Tipo:" />								
+				     <af:selectOneRadio layout="horizontal" value="#{reclamoController.tipoReclamo}" >
+	                    <f:selectItem itemValue="1" itemLabel="Reclamo" />
+                        <f:selectItem itemValue="2" itemLabel="Queja" />	 
+	                </af:selectOneRadio>
+			 </h:panelGrid>		
+			 
+			  <!-- un decima fila -->  
+			 
+			  <h:panelGrid columns="2" style="width: 60%;"> 	  
+					<h:outputText value="Detalle del Reclamo:" />                    
+	                <h:inputTextarea value="#{reclamoController.descReclamo}"/>     
+			 </h:panelGrid>		
+			 
+			  <!-- du decima fila -->  
+			 
+			  <h:panelGrid columns="2" style="width: 120%;"> 	  
+					<h:outputText value="Pedido:" />                    
+	                <h:inputTextarea value="#{reclamoController.descPedido}"/>     
+			 </h:panelGrid>				 
+			 
+		</af:panelHeader>
+			
+					    
+            <!-- Datos del Apoderado-->
+          
+           <h:panelGrid columns="2"> 	  
+					<h:outputText value="Menor de Edad:" />
+					<h:selectBooleanCheckbox id="s1" onchange="submit()"
+						                 valueChangeListener="#{reclamoController.selectMenorEdad}"
+							value="#{reclamoController.menorEdad}" 
+							required="true"/>					
+		    </h:panelGrid>
+
+						
+
+
+			<af:panelHeader id="p2" text="Datos del Apoderado" rendered="#{reclamoController.flagMenorEdad=='1'}">			
+													
+						<!-- tre decima fila -->  
+             <h:panelGrid columns="4" style="width:74%;"> 
+		          <h:outputText value="Tipo Documento:" />
+				   <h:selectOneMenu id="cboTipoDocApod"
+				                          value="#{reclamoController.tipoDocApod}">
+				       <f:selectItem itemValue="1" itemLabel="DNI" /> 
+					   <f:selectItem itemValue="2" itemLabel="RUC" />	
+					   <f:selectItem itemValue="3" itemLabel="L.E" />   							
+				   </h:selectOneMenu>
+						 					
+				   <h:outputText value="Nº de Documento:" />                    
+	               <h:inputText id="txtNumDocApod" style="width: 80px;"
+	                                 value="#{reclamoController.numDocApod}"/>				
+		     </h:panelGrid>
+		     
+		     <!-- segunda fila -->
+				<h:panelGrid columns="2" style="width: 75%;"> 
+						<h:outputText value="Nombres:" />                    
+	                    <h:inputText id="txtNombresApod" 
+	                                 value="#{reclamoController.nombresApod}"/>
+			    </h:panelGrid>
+					
+			<!-- tercera fila -->
+			    <h:panelGrid columns="4" style="width: 100%;"> 
+						<h:outputText value="Apellido Paterno:" />                    
+	                    <h:inputText id="txtApPaternoApod"
+	                                 value="#{reclamoController.apellidoPatApod}"/>
+						
+						
+						<h:outputText value="Apellido Materno:" />                    
+	                    <h:inputText id="txtApMaternoApod"
+	                                 value="#{reclamoController.apellidoMatApod}"/>
+			    </h:panelGrid>				
+
+            </af:panelHeader>
+
+				<f:facet name="footer">					
+		             <h:panelGroup style="display:block; text-align:right">
+							<h:commandButton action="#{reclamoController.createReclamo}"
+								id="c1" label="Enviar" value="Enviar" ></h:commandButton> 
+				     </h:panelGroup>					                        
+				</f:facet>      
+		       </h:panelGrid>
+		     </af:panelBox>
+			</h:form>   
+		</af:document>
+	</f:view>
+</body>
+
+	</html>
+</jsp:root>
